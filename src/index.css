@@ -1,0 +1,43 @@
+@import "tailwindcss";
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 2rem; /* Space between notices */
+  min-width: 100%;
+  will-change: transform;
+  animation: marquee 10s linear infinite;
+}
+
+/* Smooth Pause on Hover */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Styling for Notice Text */
+.marquee-content span {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border-radius: 5px;
+}
