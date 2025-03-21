@@ -18,7 +18,7 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        Meet out Team
+        Meet our Team
       </motion.h1>
 
       {/* Subtext with a cool wave effect */}
